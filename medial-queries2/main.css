@@ -2,85 +2,79 @@ body {
   background: papayawhip;
 }
 * {
-  border: 2px solid black
+  border: 2px solid black;
+  text-align: center;
 }
+/*******
+for the over all layout
+*****/
 .container{
   display:flex;
-  min-height: 100vh;
-  flex-direction: row;
+  height: 100vh;
+  padding: 0;
+  flex-direction: column;
+  gap:1em;
   flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 1em;
 }
+/***** header mobile view****/
 .a{
-  width: 100%;
-  max-height: 20vh;
+  min-width:100%;
+
+  max-height: 30%;
   flex-grow: 1;
+}
+
+/******* main body mobile view*******/
+.main{
+  display:flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: space-between;
+  width:100%;
+  height:60%;
+  gap:1em;
 }
 .b{
+  width: 100vw;
+  height: 60%;
+  justify-content: flex-start;
+}
+.c, .d, .e{
+  width:30%;
+  height:30%;
+}
+/***** Footer in moblie view ******/
+.aside{
+  display: flex;
+  flex-direction: row;
   width:100%;
-  max-height: 40vh;
-  flex-grow: 2;
-}
-.c{
-  max-width: 30%;
-  max-height: 20vh;
-  flex-grow: 1;
-}
-.d{
-  max-width: 30%;
-  max-height: 20vh;
-  flex-grow: 1;
-}
-.e{
-  max-width: 30%;
-  max-height: 20vh;
   flex-grow: 1;
 }
 .f{
   width: 100%;
-  max-height: 20vh;
-  flex-grow: 1;
 }
-
+/********** for pc view or biger screens*******/
 @media(min-width: 600px){
   .container{
     display:flex;
+    height: 100vh;
+    padding: 0;
     flex-direction: row;
+    gap:1%;
     flex-wrap: wrap;
-    min-height: 100vh;
-    /*justify-content: space-between;*/
-    justify-items: space-between;
   }
   .a{
     width:100%;
-    flex-grow: 1;
-    height:30vh;
+    height:29%
   }
-  .b{
-    width:60%;
-    flex-grow:1;
-    height:30vh;
+
+  .main{
+    display:flex;
+    width:70%;
+    height:69%;
   }
-  .c{
-    width: 30%;
-    align-self:flex-end;
-    height: 30vh;
-    flex-grow: 1;  
-  }
-  .d {
-    width: 30%;
-    height: 30vh;
-    flex-grow: 1;  
-  }
-  .e{
-    width: 30%;
-    height: 30vh;
-    flex-grow: 1;  
-  }
-  .f{
-    flex-grow: 2;
-    width:30%;
-    height:60vh;
+  .aside{
+    width:25%;
   }
 }
